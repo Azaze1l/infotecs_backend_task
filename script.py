@@ -70,7 +70,7 @@ async def cities_page(request):
         all_cities = 201177
         if cnt_cities_on_page > all_cities or cnt_cities_on_page == 0:
             response_obj = {'status': 'failed', 'message': "This page doesn't exist:"
-                                                           " something wrong with count of cities on page"}
+                                                           " something wrong with counting cities on the page"}
             return web.Response(text=json.dumps(response_obj), status=200)
 
         cnt_pages = ceil(all_cities/cnt_cities_on_page)
